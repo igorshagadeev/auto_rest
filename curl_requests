@@ -1,0 +1,11 @@
+example curl requests
+
+curl -H "Content-Type: application/json" -X POST http://127.0.0.1:8000/api/HeroPower/ -d '{"hero":"hulk","power":"green_skull","description":"green"}'
+ 
+curl -X GET http://127.0.0.1:8000/api/HeroPower/?ordering=-id
+
+curl -X GET http://127.0.0.1:8000/api/HeroPower/?ordering=-hero
+
+curl -X GET http://127.0.0.1:8000/api/HeroPower/?hero=spider&limit=1&offset=1&format=json
+
+curl -X GET http://127.0.0.1:8000/api/HeroPower/?hero__in=spider%2C+mrx&ordering=id&format=json

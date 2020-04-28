@@ -1,0 +1,38 @@
+ 
+1) ensure that you have python3 active
+
+python -V
+
+2) get location of python 3 to prevent virtualenv creating env with python2
+
+which python
+ 
+3) with that location create virtual env
+
+virtualenv -p /usr/bin/python3 env 
+. env/bin/activate
+
+4) install packages
+
+pip install -r requirements.txt
+
+5) 
+
+python manage.py makemigrations
+python manage.py migrate
+
+6)
+
+pytest -v
+or
+python manage.py test
+
+7)
+
+python manage.py runserver
+
+8)
+
+visit url at http://127.0.0.1:8000/api/
+
+take a look at curl requests
